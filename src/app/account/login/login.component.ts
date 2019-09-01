@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
     selector: 'login-component',
@@ -7,8 +8,12 @@ import { FormGroup } from '@angular/forms';
 })
 export class LoginComponent {
 
-    constructor() {
-        
+    constructor(private router: Router) {
+
+    }
+
+    navigateToAdmin() {
+        this.router.navigate(['/admin/about']);
     }
 
 }

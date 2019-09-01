@@ -1,12 +1,18 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { AppComponent } from './app.component';
-import { ContactComponent } from './contact/contact.component';
-import { AboutComponent } from './about/about.component';
+import { LoginComponent } from './account/login/login.component';
 
 const routes: Routes = [
-    {path: 'admin/about' , component: AboutComponent},
-    {path: 'admin/contact' , component: ContactComponent}
+   // {path: 'app/login' , component: LoginComponent},
+    //{path: 'admin/about' , component: AboutComponent},
+    //{path: 'admin/contact' , component: ContactComponent},
+   // { path: '', redirectTo: '/app/login', pathMatch: 'full' },
+    {
+      path: 'admin',
+      loadChildren: './admin/admin.module#AdminModule', //Lazy load account module
+      data: { preload: true }
+    },
+     {path: '**' , component: LoginComponent}
 ];
 
 @NgModule({
