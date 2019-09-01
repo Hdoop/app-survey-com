@@ -28,7 +28,13 @@
               "src/assets/css/font-awesome.css",
               "src/assets/css/custom.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/jquery.min.js",
+              "src/assets/js/bootstrap.min.js",
+              "src/assets/js/jquery.metisMenu.js",
+              "src/assets/js/jquery.slimscroll.min.js",
+              "src/assets/js/custom.js"
+            ]
           },
           "configurations": {
             "production": {
