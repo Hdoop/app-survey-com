@@ -14,6 +14,13 @@ export class QuestionService {
     let questions: QuestionBase<any>[] = [
 
       new TextboxQuestion({
+        key: 'Notes-2',
+        label: 'Notes',
+        value: 'Notes -2',
+        required: true,
+        order: 5
+      }),
+      new TextboxQuestion({
         key: 'Notes',
         label: 'Notes',
         value: 'Type description here',

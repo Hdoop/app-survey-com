@@ -1,12 +1,12 @@
 import { Component }       from '@angular/core';
-
+''
 import { QuestionService } from './question.service';
 
 @Component({
   selector: 'app-root',
   template: `
-    <div>
-      <h2>Job Application for Heroes</h2>
+    <div class='container'>
+      <h2>A race from (Json to Html)</h2>
       <app-dynamic-form [questions]="questions"></app-dynamic-form>
     </div>
   `,
