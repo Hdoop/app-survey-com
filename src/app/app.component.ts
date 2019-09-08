@@ -1,16 +1,10 @@
 import { Component }       from '@angular/core';
-''
-import { QuestionService } from './question.service';
+
 
 @Component({
   selector: 'app-root',
-  template: `
-    <div class='container'>
-      <h2>A race from (Json to Html)</h2>
-      <app-dynamic-form [questions]="questions"></app-dynamic-form>
-    </div>
-  `,
-  providers:  [QuestionService]
+  templateUrl: './app.component.html'
+
 })
 export class AppComponent {
 
