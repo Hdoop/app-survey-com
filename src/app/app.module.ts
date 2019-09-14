@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AccountRoutingModule } from './account/account-routing.module';
 import { AccountModule } from './account/account.module';
+import { FormlyCustomModule } from 'src/common/formlycustom.module';
 
 @NgModule({
   imports: [
@@ -14,7 +15,8 @@ import { AccountModule } from './account/account.module';
     FormsModule,
     AppRoutingModule,
     AccountRoutingModule,
-    AccountModule
+    AccountModule,
+    FormlyCustomModule
   ],
   declarations: [
     AppComponent

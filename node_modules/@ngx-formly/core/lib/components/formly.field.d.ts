@@ -1,0 +1,31 @@
+import { EventEmitter, ViewContainerRef, SimpleChanges, ComponentFactoryResolver, OnInit, OnChanges, OnDestroy, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, Injector } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+import { FormlyConfig } from '../services/formly.config';
+import { FormlyFieldConfig, FormlyFormOptions } from './formly.field.config';
+export declare class FormlyField implements OnInit, OnChanges, DoCheck, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnDestroy {
+    private formlyConfig;
+    private componentFactoryResolver;
+    private injector;
+    field: FormlyFieldConfig;
+    className: string;
+    warnDeprecation: boolean;
+    model: any;
+    form: FormGroup;
+    options: FormlyFormOptions;
+    modelChange: EventEmitter<any>;
+    containerRef: ViewContainerRef;
+    refsUnsubscribe: () => void;
+    constructor(formlyConfig: FormlyConfig, componentFactoryResolver: ComponentFactoryResolver, injector: Injector, hideDeprecation: any);
+    ngAfterContentInit(): void;
+    ngAfterContentChecked(): void;
+    ngAfterViewInit(): void;
+    ngAfterViewChecked(): void;
+    ngDoCheck(): void;
+    ngOnInit(): void;
+    ngOnChanges(changes: SimpleChanges): void;
+    ngOnDestroy(): void;
+    private renderField;
+    private triggerHook;
+    private createWrapperRef;
+    private attachComponentRef;
+}

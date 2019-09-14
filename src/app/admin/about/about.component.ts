@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormGroup } from '@angular/forms';
+import { FormlyFieldConfig, FormlyFormOptions } from '@ngx-formly/core';
 
 @Component({
   selector: 'app-about',
@@ -6,9 +8,40 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutComponent implements OnInit {
 
-  constructor() { }
+  form = new FormGroup({});
+  model: any = {};
+  options: FormlyFormOptions = {};
 
-  ngOnInit() {
+  fields: FormlyFieldConfig[] = [
+    {
+      key: 'email',
+      type: 'input',
+      wrappers: ['form-field-horizontal'],
+      templateOptions: {
+        label: 'Email',
+        type: 'email',
+        placeholder: 'Formly is terrific!',
+        required: true,
+      },
+    },
+    {
+      key: 'password',
+      type: 'input',
+      wrappers: ['form-field-horizontal'],
+      templateOptions: {
+        label: 'Password',
+        type: 'password',
+        placeholder: 'Formly is terrific!',
+        required: true,
+      },
+    },
+  ];
+
+  ngOnInit(): void {
+    // throw new Error("Method not implemented.");
+   }
+   
+  submit() {
+    alert(JSON.stringify(this.model));
   }
-
 }
